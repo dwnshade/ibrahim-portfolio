@@ -91,11 +91,11 @@ const experiences = [
 ];
 
 const skills = [
-  ["Web development", "HTML · CSS · JavaScript · TypeScript · React · Next.js · Responsive UI"],
-  ["CMS & e-commerce", "WordPress · Oxygen · Elementor · WooCommerce · Payments"],
-  ["Backend & data", "Python · SQL · PostgreSQL · MariaDB · Supabase · REST APIs"],
-  ["AI & retrieval", "RAG · Ollama · Qdrant · Embeddings · Streamlit · Web/PDF extraction"],
-  ["Systems & tools", "Windows · Linux · Docker · Git/GitHub · Vercel · Networking fundamentals"],
+  ["Programming", "JavaScript · TypeScript · Python · C++ · Kotlin"],
+  ["Web development", "HTML · CSS · React · Next.js · Responsive UI"],
+  ["CMS & e-commerce", "WordPress · Oxygen · Elementor · WooCommerce"],
+  ["Backend & data", "SQL · PostgreSQL · MariaDB · Supabase · REST APIs"],
+  ["Systems & tools", "Windows · Linux · Docker · Git/GitHub · Networking fundamentals"],
   ["Design", "UI/UX · Web design · Graphic design · Content structure"],
   ["Growth", "Meta Ads · Google Ads · Analytics · Campaign strategy · E-commerce"],
   ["Professional", "Client communication · Teamwork · Critical thinking · Fast learning"],
