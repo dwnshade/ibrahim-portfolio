@@ -6,8 +6,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ibrahim Causevic Portfolio",
-  description: "Web and IT professional based in Ljubljana, building practical digital products, websites and applied AI systems.",
+  title: "Ibrahim Čaušević — Web & IT Portfolio",
+  description: "Web and IT professional completing a degree in Web and Information Technologies and building practical digital products, websites and applied AI systems.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

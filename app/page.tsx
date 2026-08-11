@@ -7,7 +7,7 @@ type TabId = "home" | "work" | "profile" | "timeline" | "contact";
 
 const tabs: Array<{ id: TabId; label: string; short: string }> = [
   { id: "home", label: "Home", short: "01" },
-  { id: "work", label: "Selected Work", short: "02" },
+  { id: "work", label: "Recent Work", short: "02" },
   { id: "profile", label: "About", short: "03" },
   { id: "timeline", label: "Experience", short: "04" },
   { id: "contact", label: "Contact", short: "05" },
@@ -48,35 +48,57 @@ const experiences = [
     period: "2025 — NOW",
     title: "Independent Product Development",
     area: "WEB · IT · AI",
-    copy: "Building a fleet operations PWA, exploring applied AI and developing a local RAG system as a final thesis project.",
+    copy: "Turning practical operational needs into working digital products while completing my degree.",
+    highlights: [
+      "Designed and built a role-based fleet operations PWA with Next.js and Supabase.",
+      "Created a complete WordPress and Oxygen website for a premium transport service.",
+      "Developing a local RAG system with Python, Ollama, Qdrant and Docker as my final thesis.",
+    ],
   },
   {
     period: "2023 — 2024",
     title: "Marketing Department Lead",
     area: "LEADERSHIP · PRODUCT",
-    copy: "Managed marketing operations, developed sales strategies, launched a new brand and contributed to an internal campaign-management platform.",
+    copy: "Combined team leadership, commercial strategy, product thinking and hands-on digital work.",
+    highlights: [
+      "Managed advertising workflows and developed strategies focused on sales growth.",
+      "Led the positioning and launch preparation for a new brand, from visual direction to market materials.",
+      "Collaborated on an internal platform for creating, managing and analysing advertising campaigns.",
+    ],
   },
   {
     period: "2022 — 2023",
     title: "Performance Marketing & Web Operations",
     area: "MARKETING · WEB",
-    copy: "Managed Meta and Google campaigns alongside WordPress, e-commerce, payment integrations and ongoing website work.",
+    copy: "Worked across paid acquisition, websites, e-commerce and day-to-day technical operations.",
+    highlights: [
+      "Planned, launched and optimised Meta and Google advertising campaigns.",
+      "Managed WordPress websites, content, plugins and e-commerce experiences.",
+      "Integrated payment tools, improved usability and resolved ongoing website issues.",
+    ],
   },
   {
     period: "2018 — 2022",
     title: "Freelance Web & Technical Work",
     area: "FREELANCE · SUPPORT",
-    copy: "Created and maintained WordPress websites while building broad client-facing, operational and technical experience.",
+    copy: "Built a broad base through freelance projects and varied client-facing work.",
+    highlights: [
+      "Created, edited and maintained WordPress websites for different needs.",
+      "Supported affiliate marketing and digital advertising activities.",
+      "Developed strong communication, customer service and practical problem-solving skills.",
+    ],
   },
 ];
 
 const skills = [
-  ["Frontend", "HTML · CSS · JavaScript · React · Next.js"],
-  ["CMS & Commerce", "WordPress · Oxygen · WooCommerce"],
-  ["Backend & Data", "Python · SQL · PostgreSQL · Supabase · APIs"],
-  ["Systems", "Linux · Docker · Git · Networking fundamentals"],
-  ["Applied AI", "Ollama · Qdrant · RAG · Embeddings · Streamlit"],
-  ["Product & Growth", "UI/UX · Analytics · Meta Ads · Google Ads · Strategy"],
+  ["Web development", "HTML · CSS · JavaScript · TypeScript · React · Next.js · Responsive UI"],
+  ["CMS & e-commerce", "WordPress · Oxygen · Elementor · WooCommerce · Payments"],
+  ["Backend & data", "Python · SQL · PostgreSQL · MariaDB · Supabase · REST APIs"],
+  ["AI & retrieval", "RAG · Ollama · Qdrant · Embeddings · Streamlit · Web/PDF extraction"],
+  ["Systems & tools", "Windows · Linux · Docker · Git/GitHub · Vercel · Networking fundamentals"],
+  ["Design", "UI/UX · Web design · Graphic design · Content structure"],
+  ["Growth", "Meta Ads · Google Ads · Analytics · Campaign strategy · E-commerce"],
+  ["Professional", "Client communication · Teamwork · Critical thinking · Fast learning"],
 ];
 
 export default function Home() {
@@ -120,13 +142,12 @@ export default function Home() {
 
   return (
     <main className="portfolio-desktop" ref={desktopRef} onPointerMove={moveDesktop} onPointerLeave={resetDesktop}>
-      <div className="wallpaper-noise" aria-hidden="true" />
       <div className="cursor-glow" aria-hidden="true" />
       <div className="wallpaper-orb orb-left" aria-hidden="true" />
       <div className="wallpaper-orb orb-right" aria-hidden="true" />
       <div className="desktop-grid" aria-hidden="true" />
 
-      <section className="workspace-window" aria-label="Ibrahim Causevic portfolio application">
+      <section className="workspace-window" aria-label="Ibrahim Čaušević portfolio application">
         <header className="window-chrome">
           <div className="traffic-lights" aria-hidden="true"><i /><i /><i /></div>
 
@@ -154,18 +175,18 @@ export default function Home() {
             {activeTab === "home" && (
               <>
                 <div className="home-copy">
-                  <h1>IBRAHIM<br /><em>CAUSEVIC</em></h1>
-                  <p>A Web &amp; IT generalist building practical products across frontend development, digital systems and applied AI. I learn fast, take ownership and enjoy turning unclear problems into working solutions.</p>
+                  <h1>IBRAHIM<br /><em>ČAUŠEVIĆ</em></h1>
+                  <p className="home-lead"><strong>Web &amp; IT professional completing my final thesis to qualify as a graduate engineer in Web and Information Technologies.</strong> I work across web development, digital systems, applied AI and technical operations — learning quickly and turning unclear problems into practical solutions.</p>
                   <div className="home-actions">
                     <button type="button" onClick={() => openTab("work")}>View selected work <span>↗</span></button>
                     <button type="button" onClick={() => openTab("contact")}>Contact</button>
                   </div>
                 </div>
 
-                <div className="home-portrait-stage" aria-label="Portrait of Ibrahim Causevic">
+                <div className="home-portrait-stage" aria-label="Portrait of Ibrahim Čaušević">
                   <div className="home-portrait-orbit" aria-hidden="true"><i /></div>
                   <figure className="home-portrait">
-                    <Image src="/profile-current.jpeg" alt="Ibrahim Causevic" width={1794} height={2560} priority />
+                    <Image src="/profile-current.jpeg" alt="Ibrahim Čaušević" width={1794} height={2560} priority />
                   </figure>
                 </div>
               </>
@@ -174,7 +195,8 @@ export default function Home() {
             {activeTab === "work" && (
               <div className="work-layout">
                 <aside className="project-sidebar">
-                  <h2>Selected<br /><em>work.</em></h2>
+                  <h2>Recent<br /><em>work.</em></h2>
+                  <p className="project-sidebar-copy">Three of my latest projects — a snapshot of what I have been building, not the full range of my work.</p>
                   <div className="project-selector" role="tablist" aria-label="Select a project">
                     {projects.map((project, index) => (
                       <button
@@ -231,13 +253,13 @@ export default function Home() {
             {activeTab === "profile" && (
               <div className="profile-layout">
                 <div className="profile-story">
-                  <h2>I understand the whole product,<br /><em>not only one layer.</em></h2>
-                  <p>My background combines web development, technical operations, digital products and performance marketing. That means I can move between interface work, data, systems and the practical business problem behind a product.</p>
-                  <p>I have built WordPress websites, a role-based fleet PWA with Supabase, and a local RAG system using Python, Ollama and Qdrant. I am comfortable learning unfamiliar tools when a project needs them.</p>
-                  <p>I am finishing my degree in Web &amp; Information Technologies and looking for an early-career IT role where broad technical understanding, curiosity and ownership are useful.</p>
+                  <h2>Broad technical range.<br /><em>Practical mindset.</em></h2>
+                  <p>I&apos;m Ibrahim, a computer technician and final-stage Web &amp; Information Technologies student based in Ljubljana. My coursework is complete and I am currently finishing my final thesis.</p>
+                  <p>My background is deliberately broad: web development, WordPress and e-commerce, technical operations, digital marketing, brand work and client communication. More recently, I have been building with React, Next.js, Supabase, Python and local AI tools.</p>
+                  <p>I enjoy understanding the full problem rather than only one layer of it — from interface and data to deployment, users and the business goal. I am looking for an IT role where curiosity, ownership and the ability to connect different disciplines are useful.</p>
                   <div className="about-meta">
-                    <div><span>Education</span><b>Web &amp; Information Technologies — coursework complete, final thesis in progress</b></div>
-                    <div><span>Languages</span><b>Slovenian · English · BS/HR/SR · German</b></div>
+                    <div><span>Education</span><b>Web &amp; Information Technologies — coursework completed, final thesis in progress</b></div>
+                    <div><span>Languages</span><b>Bosnian / Croatian / Serbian · Slovenian · English · Basic German</b></div>
                   </div>
                 </div>
 
@@ -253,7 +275,7 @@ export default function Home() {
               <div className="timeline-layout">
                 <aside className="timeline-menu">
                   <h2>Experience.</h2>
-                  <p>A mix of product building, web operations, marketing and client-facing technical work.</p>
+                  <p>Experience across product building, web operations, marketing leadership, e-commerce and client-facing technical work.</p>
                   <div className="timeline-selector">
                     {experiences.map((item, index) => (
                       <button type="button" className={activeExperience === index ? "is-active" : ""} key={item.period} onClick={() => setActiveExperience(index)}>
@@ -267,13 +289,14 @@ export default function Home() {
                   <small>{experiences[activeExperience].period}</small>
                   <h3>{experiences[activeExperience].title}</h3>
                   <p>{experiences[activeExperience].copy}</p>
+                  <ul>{experiences[activeExperience].highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
                   <footer>{experiences[activeExperience].area}</footer>
                 </div>
 
                 <div className="education-window">
                   <header><span>Education</span></header>
                   <article><time>2023 — 2026</time><div><b>Web &amp; Information Technologies</b><small>Coursework completed · Final thesis in progress</small></div></article>
-                  <article><time>2019 — 2023</time><div><b>Computer Technician / Programmer</b><small>Technical foundation in computing and programming</small></div></article>
+                  <article><time>2019 — 2023</time><div><b>Computer Technician</b><small>Technical foundation in computing, networking and programming</small></div></article>
                 </div>
               </div>
             )}
@@ -286,12 +309,13 @@ export default function Home() {
                 </div>
 
                 <div className="contact-card">
-                  <h2>Let&apos;s<br /><em>talk.</em></h2>
+                  <h2>Let&apos;s <em>talk.</em></h2>
                   <p>I&apos;m open to junior and early-career opportunities across web development, IT support, technical operations, digital systems and applied AI.</p>
                   <div className="contact-details">
                     <div><span>Email</span><a href="mailto:ibrahimcausevic.pro@gmail.com">ibrahimcausevic.pro@gmail.com</a></div>
+                    <div><span>Phone</span><a href="tel:+38670296468">+386 70 296 468</a></div>
                     <div><span>Location</span><b>Ljubljana, Slovenia</b></div>
-                    <div><span>Work</span><b>On-site · Hybrid · Remote</b></div>
+                    <div><span>Availability</span><b>On-site · Hybrid · Remote</b></div>
                   </div>
                   <a className="contact-cta" href="mailto:ibrahimcausevic.pro@gmail.com?subject=IT%20opportunity">Send an email <span>↗</span></a>
                 </div>
