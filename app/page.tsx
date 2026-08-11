@@ -310,7 +310,7 @@ export default function Home() {
 
                 <div className="contact-card">
                   <h2>Let&apos;s <em>talk.</em></h2>
-                  <p>I&apos;m open to junior and early-career opportunities across web development, IT support, technical operations, digital systems and applied AI.</p>
+                  <p>Have a role, project or idea where my technical range could be useful? Email or call me — I&apos;m always interested in a good conversation.</p>
                   <div className="contact-details">
                     <div><span>Email</span><a href="mailto:ibrahimcausevic.pro@gmail.com">ibrahimcausevic.pro@gmail.com</a></div>
                     <div><span>Phone</span><a href="tel:+38670296468">+386 70 296 468</a></div>
