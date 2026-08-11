@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js
+/.next/
+/out/
+
+# production and logs
+/build
+*.log
+
+# local environment files
+.env*
+
+# Vercel local metadata
+.vercel
+
+# operating system files
+.DS_Store
+*.pem
